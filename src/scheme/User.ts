@@ -7,6 +7,8 @@ class User {
   public password: string;
   @prop({ required: true })
   public email: string;
+  @prop({ required: true, default: new Date().getTime() })
+  public lastLogin: string;
 }
 
 export { User };
